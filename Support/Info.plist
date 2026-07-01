@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSContactsUsageDescription</key>
+	<string>連絡先の書き出し・取り込み・端末間転送のために連絡先へアクセスします。データはこの端末と転送相手の端末の間でのみ扱われ、外部サーバへは一切送信されません。</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>近くの端末へ連絡先を直接転送するためにローカルネットワークを使用します。</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>近くの端末を発見して連絡先を転送するためにBluetoothを使用します。</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_cntmove._tcp</string>
+		<string>_cntmove._udp</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array/>
+</dict>
+</plist>
