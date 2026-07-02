@@ -1,9 +1,14 @@
 import SwiftUI
 
-/// アプリのルート。オンボーディング完了状態に応じてホームへ振り分ける。
-/// (UI実装タスクで置き換え予定のプレースホルダ)
+/// アプリのルート。オンボーディング完了状態(UserDefaults: onboarding.completed)で分岐する。
 struct RootView: View {
+    @EnvironmentObject private var appModel: AppModel
+
     var body: some View {
-        Text("ContactMove")
+        if appModel.onboardingCompleted {
+            HomeView()
+        } else {
+            OnboardingView()
+        }
     }
 }
