@@ -3,7 +3,7 @@
 
 /// 連絡先アクセス権限の状態(CNAuthorizationStatus のプラットフォーム中立表現)。
 /// iOS 18 の限定アクセス(仕様書 §7.2)は `.limited` で表す。
-public enum ContactsAccessStatus: String, Sendable {
+public enum ContactsAccessStatus: String, CaseIterable, Sendable {
     case notDetermined, denied, restricted, authorized, limited
 }
 

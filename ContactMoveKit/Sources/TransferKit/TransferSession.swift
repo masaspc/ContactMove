@@ -394,10 +394,11 @@ extension TransferSession: MCNearbyServiceAdvertiserDelegate {
 
 /// MultipeerConnectivity が使えない環境(Linux 等)向けのスタブ。
 /// API 互換性のためだけに存在し、start() は即座に失敗イベントを流す。
+/// (Combine も無い環境のため ObservableObject には準拠しない)
 @MainActor
-public final class TransferSession: ObservableObject {
+public final class TransferSession {
     public let events: AsyncStream<TransferEvent>
-    @Published public private(set) var discoveredPeers: [String] = []
+    public private(set) var discoveredPeers: [String] = []
     private let eventContinuation: AsyncStream<TransferEvent>.Continuation
 
     public init(role: TransferRole, deviceName: String) {
