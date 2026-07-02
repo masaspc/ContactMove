@@ -79,7 +79,7 @@ public struct CSVImportResult: Sendable {
 }
 
 public enum CSVSchema {
-    public static let standardHeaders: [String]                       // 仕様書 §5.1 の31列
+    public static let standardHeaders: [String]                       // 仕様書 §5.1 の32列
     public static func detectPreset(headers: [String]) -> CSVPreset?  // standard/google/outlook 自動判定
     public static func defaultMapping(for preset: CSVPreset, headers: [String]) -> ColumnMapping
     /// バリデーション込み変換(空行・列数不一致スキップ、電話番号クレンジング、不正誕生日無視)
